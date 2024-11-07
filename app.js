@@ -8,6 +8,7 @@ const data = require('./data');
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 app.use(express.static('public'));
+app.use('/public', express.static(__dirname + '/public'));
 
 // this is the default route for the home page
 app.get('/', (req, res) => {
