@@ -6,6 +6,7 @@ const data = require('./data');
 
 // Setting up the ejs as the view engine
 app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
 app.use(express.static('public'));
 
 // this is the default route for the home page
