@@ -1,0 +1,35 @@
+<!-- this is my part 4
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users</title>
+  <link rel="stylesheet" href="/css_style.css">
+</head>
+<body>
+  <!-- for part 7 - navigation bar -->
+  <nav>
+    <a href="/">Home</a>
+    <a href="/user">Users</a>
+    <a href="/products">Products</a>
+  </nav>
+
+  <h1>Users</h1>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+    <% users.forEach(user => { %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+      </tr>
+    <% }) %>
+  </table>
+</body>
+</html>
