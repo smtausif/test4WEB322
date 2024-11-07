@@ -8,17 +8,17 @@ const data = require('./data');
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
-// Default route for the home page
+// this is the default route for the home page
 app.get('/', (req, res) => {
     res.render('index');
 });
 
-// Route to display users
+// this is for route to display users
 app.get('/user', (req, res) => {
     res.render('user', { users: data.users });
 });
 
-// Route to display products
+// this is for route to display products
 app.get('/products', (req, res) => {
     res.render('products', { products: data.products });
 });
@@ -29,7 +29,5 @@ app.get('/products/high-id', (req, res) => {
     res.render('prodhighthan3', { products: highIDProducts });
 });
 
-
-app.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
-});
+// Export the app for serverless function use on Vercel
+module.exports = app;
